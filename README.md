@@ -1,2 +1,2 @@
-# Generic CMake template.
+# Work Package Description
 
