@@ -3,67 +3,64 @@
 int main(int argc, char **argv)
 {
 
-  // ... einzeiliger Kommentar
+int zahl1 = 0;
+int zahl2 = 0;
+double quotient = 0;
 
-  /*
-  Blockkommentar
-  kann
-  auch
-  mehrzeilig
-  sein
-  */
+printf("Geben Sie Zahl 1 ein: ");
+scanf("%d", &zahl1);
+printf("Geben Sie Zahl 2 ein: ");
+scanf("%d", &zahl2);
 
-  printf("Hello World!\n");
-  printf("Das ist eine ");
-  printf("Zeile\n");
-  printf("das sind \nzwei Zeilen\n");
-  // Visitenkarte
-  printf("\nWalter Hausleitner\nGartenweg 27\n8160 Weiz\n\nMobil: 0676 123456789\n");
+// Version 1
+quotient = (double) zahl1 / (double) zahl2;   // (double) ... Typkonvertierung auf double
+                                              // type casting
+// der "größere" Datentyp bestimmt den Datentyp des Ergebnisses einer Rechenoperation 
+printf("Version 1: %d / %d = %f\n", zahl1, zahl2, quotient);
 
-  // ----------------------------------------------------------------------------------------
+// Version 2 ... Prüfung, ob Nenner 0 ist
+if (zahl2 != 0)       // != ... ungleich
+{
+  // Zahl2 ist ungleich 0
+  quotient = (double) zahl1 / (double) zahl2;
+  printf("Version 2: %d / %d = %f\n", zahl1, zahl2, quotient);
+} else 
+{
+  // Zahl2 = 0
+  printf("Version 2: Eine Division durch 0 ist nicht erlaubt!\n");
+}
 
-  int anzahl; // Deklaration (Variable im Speicher anmelden) int ... integer (= Ganzzahl)
-  anzahl = 0; // Initialisierung (einen Anfangswert zuweisen)
+// Übungen mit if-Verzweigung
+/*
+              if (Bedingung) 
+              {
+                // Bedingung erfüllt
+                // ...
+              } else
+              {
+                // Bedingung nicht erfüllt
+                // ...
+              }
+*/
 
-  // Deklaration + Initialisierung
-  int anzahl1 = 0; // Namen müssen eindeutig sein
+// Vergleichsoperatoren: <, <=, >, >=,!=, ==     == ... auf Gleichheit prüfen
 
-  anzahl = 15;
-  printf("Anzahl: %d\n", anzahl); // d ... decimal
+// Lies 2 ganze Zahlen (num1, num2) ein und gib die größere Zahl aus 
 
-  double preis = 1.75;          // double ... Fließkommazahlen mit doppelter Genauigkeit
-  printf("Preis: %f\n", preis); // f ... floating point
-  printf("Preis: %.2f\n", preis);
+int num1 = 0, num2 = 0;
+printf("Zahl 1: ");
+scanf("%d", &num1);
+printf("Zahl 2: ");
+scanf("%d", &num2);
 
-  double betrag = 0;
-  // Berechnung eines Produktes
-  betrag = anzahl * preis;
-  printf("Rechnungsbetrag: %.2f\n", betrag);
+if (num1 > num2)
+{
+  printf("%d ist größer\n", num1);
+} else
+{
+  printf("%d ist größer\n", num2);
+}
 
-  //---------------------------------------------------------------------------------
-
-  // Einlesen von Daten und Zuweisen an Variablen
-  printf("---------------------------------\n\n");
-  int menge=0;
-  double verkaufspreis=0;
-  double rechnungsbetrag = 0;
-
-  // Einlesen der Menge
-  printf("Eingabe der Menge: ");
-  scanf("%d",&menge);
-  
-
-  rechnungsbetrag = menge * verkaufspreis;
-  printf("Verkaufspreis: € %.2f\n",rechnungsbetrag);
-
-
-
-
-
-
-
-
-  
 
 
 }
